@@ -83,10 +83,11 @@ HTTP Method와 API 경로를 정하고 해당 Service 함수를 호출한다.
 
 ## 실행 및 Swagger 테스트
 
-필요한 패키지가 없다면 먼저 설치한다.
+처음 실행할 때 프로젝트의 가상환경을 활성화하고 필요한 패키지를 설치한다.
 
 ```bash
-python -m pip install fastapi uvicorn
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
 ```
 
 프로젝트 최상위 폴더에서 다음 명령으로 개인 앱을 실행한다.

@@ -40,10 +40,11 @@ Router만 실패 → API 경로, 상태 코드 또는 응답 설정 문제
 
 ## 실행 방법
 
-필요한 테스트 패키지가 없다면 먼저 설치한다.
+프로젝트의 가상환경을 활성화하고 필요한 패키지를 설치한다.
 
 ```bash
-python -m pip install pytest httpx
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
 ```
 
 프로젝트 최상위 폴더에서 실행한다.
@@ -51,21 +52,21 @@ python -m pip install pytest httpx
 전체 댓글 테스트:
 
 ```bash
-pytest test -v
+python -m pytest test -v
 ```
 
 계층별 테스트:
 
 ```bash
-pytest test/test_comment_scheme.py -v
-pytest test/test_comment_service.py -v
-pytest test/test_comment_router.py -v
+python -m pytest test/test_comment_scheme.py -v
+python -m pytest test/test_comment_service.py -v
+python -m pytest test/test_comment_router.py -v
 ```
 
 테스트 하나만 실행:
 
 ```bash
-pytest test/test_comment_router.py::test_create_comment_api_returns_201 -v
+python -m pytest test/test_comment_router.py::test_create_comment_api_returns_201 -v
 ```
 
 ## 주요 상태 코드
