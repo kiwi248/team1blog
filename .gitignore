@@ -1,9 +1,11 @@
 # Python virtual environments
 .venv/
+**/.venv/
 venv/
 
 # Python cache files
 __pycache__/
+**/__pycache__/
 *.pyc
 *.py[cod]
 
